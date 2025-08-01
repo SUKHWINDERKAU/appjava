@@ -1,0 +1,10 @@
+{{!< layouts/main }}
+
+<h2>Add New Item</h2>
+<form action="/items/add" method="POST" class="form">
+  <label>Name:</label>
+  <input type="text" name="name" required />
+  <label>Description:</label>
+  <textarea name="description"></textarea>
+  <button type="submit" class="btn btn-submit">Add Item</button>
+</form>

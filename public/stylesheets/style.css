@@ -1,0 +1,364 @@
+/* CSS Variables for Colors */
+:root {
+  --color-bg-light: #eafaf1;           /* soft seafoam */
+  --color-bg-white: #ffffff;
+  --color-text-dark: #0b2e24;          /* deep forest green */
+  --color-text-medium: #355e52;        /* muted green */
+  --color-text-light: #f0fdf4;         /* very light mint */
+  --color-primary: #2ebd94;            /* sea green */
+  --color-primary-hover: #229d7c;      /* deeper sea green */
+  --color-secondary: #1c4739;          /* dark teal green */
+  --color-accent-blue: #c4f0dd;        /* light mint */
+  --color-accent-red: #ef4444;
+  --color-accent-red-hover: #dc2626;
+  --color-accent-amber: #fbbf24;
+  --color-accent-amber-hover: #f59e0b;
+  --color-border: #c4dcd1;
+  --color-navbar-gradient: linear-gradient(90deg, #1c4739 0%, #2ebd94 100%);
+  --transition-fast: 0.3s ease;
+}
+
+/* Reset & base styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom right, #eafaf1, #d9f5ea);
+  color: var(--color-text-dark);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  line-height: 1.6;
+  font-size: 16px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Watermark Background Text on Body */
+body::before {
+  content: "ITEM TO BE FORMATTED";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  font-size: 6rem;
+  font-weight: 800;
+  color: rgba(0, 128, 96, 0.101);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Wrapper for header and content */
+.page-wrapper {
+  position: relative;
+  z-index: 1;
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 2rem auto 0;
+  width: 95%;
+  background-color: var(--color-bg-white); /* high contrast */
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(28, 71, 57, 0.1);
+  padding: 2rem 3rem;
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+/* Watermark Inside Wrapper */
+.page-wrapper::before {
+  content: "ITEMS";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-20deg);
+  font-size: 5rem;
+  font-weight: 800;
+  color: rgba(46, 189, 148, 0.1);
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 0;
+}
+
+/* Navbar styles */
+.navbar {
+  background: var(--color-navbar-gradient);
+  padding: 1rem 2rem;
+  color: var(--color-text-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.03em;
+  user-select: none;
+  transition: background-color var(--transition-fast);
+}
+
+.navbar:hover,
+.navbar:focus-within {
+  background: linear-gradient(90deg, #229d7c 0%, #2ebd94 100%);
+}
+
+/* Navbar links */
+.navbar nav a {
+  color: var(--color-text-light);
+  margin-left: 2rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.15rem;
+  transition: color var(--transition-fast), transform 0.2s ease;
+  position: relative;
+}
+
+.navbar nav a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: var(--color-accent-blue);
+  width: 0;
+  transition: width var(--transition-fast);
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.navbar nav a:hover,
+.navbar nav a:focus {
+  color: var(--color-accent-blue);
+  outline: none;
+  transform: scale(1.1);
+}
+
+.navbar nav a:hover::after,
+.navbar nav a:focus::after {
+  width: 100%;
+}
+
+/* Main content container */
+main.container {
+  flex: 1 0 auto;
+  padding: 2.5rem 0;
+  width: 100%;
+}
+
+/* Headings */
+h1, h2 {
+  color: var(--color-secondary);
+  margin-bottom: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+.welcome-section {
+  padding: 3rem 2rem;
+}
+
+.welcome-section h1 {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.welcome-section h2 {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  color: var(--color-accent);
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-text-medium);
+}
+
+.navigation-tips {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+
+.navigation-tips li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.note-box {
+  margin-top: 2rem;
+  background-color: #e8fdf4;
+  border-left: 5px solid #2ebd94;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  color: #155e4b;
+  border-radius: 8px;
+}
+
+
+/* Buttons */
+.btn {
+  padding: 0.65rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover));
+  color: white;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 700;
+  transition: background-color var(--transition-fast), box-shadow var(--transition-fast), transform 0.2s ease;
+  display: inline-block;
+  box-shadow: 0 5px 15px rgba(46, 189, 148, 0.5);
+  user-select: none;
+}
+
+.btn:hover,
+.btn:focus {
+  background: #dcfce7;
+  color: var(--color-primary);
+  box-shadow: 0 8px 25px rgba(34, 157, 124, 0.7);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+.btn-delete {
+  background: linear-gradient(135deg, var(--color-accent-red), var(--color-accent-red-hover));
+  box-shadow: 0 5px 15px rgba(239, 68, 68, 0.5);
+  color: white;
+}
+
+.btn-delete:hover,
+.btn-delete:focus {
+  background: #fee2e2;
+  color: var(--color-accent-red);
+  box-shadow: 0 8px 25px rgba(220, 38, 38, 0.7);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.btn-edit {
+  background: linear-gradient(135deg, var(--color-accent-amber), var(--color-accent-amber-hover));
+  box-shadow: 0 5px 15px rgba(251, 191, 36, 0.5);
+  color: white;
+}
+
+.btn-edit:hover,
+.btn-edit:focus {
+  background: #fef3c7;
+  color: var(--color-accent-amber);
+  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.7);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+/* Table styles */
+.item-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 2.5rem;
+  background-color: var(--color-bg-white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(28, 71, 57, 0.07);
+  font-size: 1rem;
+  user-select: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.item-table th,
+.item-table td {
+  padding: 1.2rem 1.75rem;
+  text-align: left;
+  vertical-align: middle;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-medium);
+  transition: background-color 0.3s ease;
+}
+
+.item-table th {
+  background-color: var(--color-accent-blue);
+  font-weight: 700;
+  color: var(--color-secondary);
+  letter-spacing: 0.06em;
+}
+
+.item-table tr:last-child td {
+  border-bottom: none;
+}
+
+.item-table tr:hover {
+  background-color: #dcfce7;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.item-table tr:focus-within {
+  outline: 2px solid var(--color-primary);
+  outline-offset: -2px;
+}
+.features-section {
+  padding: 2rem 0;
+}
+
+.features-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.features-section p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--color-text-medium);
+}
+
+.features-list {
+  list-style: disc;
+  padding-left: 2rem;
+}
+
+.features-list li {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: var(--color-text-dark);
+}
+
+
+/* Footer styles */
+footer {
+  flex-shrink: 0;
+  background-color: var(--color-secondary);
+  color: var(--color-text-light);
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.95rem;
+  user-select: none;
+  border-top: 3px solid var(--color-primary);
+  font-weight: 600;
+}
+
+/* Responsive nav (basic) */
+@media (max-width: 640px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .navbar nav a {
+    margin-left: 0;
+    font-size: 1rem;
+  }
+  .page-wrapper {
+    padding: 1.5rem 1.5rem;
+  }
+}
+
+/* Focus styles for accessibility */
+a:focus,
+button:focus {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}

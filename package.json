@@ -1,0 +1,17 @@
+{
+  "name": "mycrudapp",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.6.1",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.3",
+    "http-errors": "^2.0.0",
+    "mongoose": "^7.2.2",
+    "morgan": "^1.10.0"
+  }
+}

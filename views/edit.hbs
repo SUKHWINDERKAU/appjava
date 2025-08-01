@@ -1,0 +1,10 @@
+{{!< layouts/main }}
+
+<h2>Edit Item</h2>
+<form action="/items/edit/{{item._id}}" method="POST" class="form">
+  <label>Name:</label>
+  <input type="text" name="name" value="{{item.name}}" required />
+  <label>Description:</label>
+  <textarea name="description">{{item.description}}</textarea>
+  <button type="submit" class="btn btn-submit">Update Item</button>
+</form>
