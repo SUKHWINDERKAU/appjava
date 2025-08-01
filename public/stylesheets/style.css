@@ -140,6 +140,86 @@ body::before {
 .navbar nav a:focus::after {
   width: 100%;
 }
+/* Welcome Section */
+.welcome-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1.5rem;
+  background-color: #f0f4f8;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  margin-top: 2rem;
+}
+
+.welcome-content {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  gap: 2rem;
+  align-items: center;
+  text-align: left;
+}
+
+.text-block {
+  flex: 1 1 400px;
+}
+
+.image-block {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.image-block img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.welcome-section h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.welcome-section p {
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: #007acc;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #007acc;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #005b99;
+}
+
+/* Fade-in Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 /* Main content container */
 main.container {
