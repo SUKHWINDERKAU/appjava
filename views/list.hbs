@@ -2,6 +2,20 @@
 
 <h2>Items List</h2>
 
+<!-- Search Form -->
+<form action="/items" method="get" class="search-form">
+  <input
+    type="text"
+    name="search"
+    placeholder="Search items by name"
+    value="{{searchQuery}}"
+    class="search-input"
+  />
+  <button type="submit" class="search-button">Search</button>
+</form>
+
+<br />
+
 {{#if items.length}}
   <table class="item-table">
     <thead>
