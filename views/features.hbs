@@ -1,21 +1,33 @@
 {{!< layouts/main }}
 
 <section class="features-section">
-  <h2>Application Features</h2>
-  
-  <p>This web application is designed to provide full CRUD functionality (Create, Read, Update, Delete) in a user-friendly and secure environment. Below are the key features included in this project:</p>
+  <div class="features-header">
+    <h2><i class="fas fa-list-alt"></i> Application Features</h2>
+    <img src="/images/features-banner.jpg" alt="App Features Banner" class="features-banner">
+    <p>This full-stack CRUD web application offers a secure and interactive platform to manage your items with ease. Built using <strong>Node.js</strong>, <strong>Express</strong>, <strong>MongoDB</strong>, and <strong>Handlebars</strong>, it provides the following key features:</p>
+  </div>
 
   <ul class="features-list">
-    <li><strong>Create Items:</strong> Easily add new entries using a clean and simple form. All required fields are validated.</li>
-    <li><strong>Read/View Items:</strong> Display a complete list of stored items in a responsive table format. Includes pagination and search (optional).</li>
-    <li><strong>Update Items:</strong> Edit existing items directly from the list page using pre-filled forms for efficiency.</li>
-    <li><strong>Delete Items:</strong> Remove individual items securely with confirmation prompts to prevent accidental deletions.</li>
-    <li><strong>User Authentication:</strong> Supports Local and GitHub login using Passport.js to ensure secure access to app features.</li>
-    <li><strong>Protected Routes:</strong> Only authenticated users can create, edit, or delete items.</li>
-    <li><strong>Search Functionality:</strong> Easily filter items in real-time (if implemented).</li>
-    <li><strong>Responsive Layout:</strong> Fully mobile-friendly UI with clean design powered by custom CSS.</li>
-    <li><strong>Error Handling:</strong> Friendly messages for validation, 404 errors, and server issues.</li>
-    <li><strong>Deployed Online:</strong> Hosted using Render or another cloud platform for easy access and sharing.</li>
-    <li><strong>Reusable Layout:</strong> Uses Handlebars layout (`main.hbs`) for consistent header, navigation, and footer across all pages.</li>
+    <li><i class="fas fa-plus-circle"></i> <strong>Create Items:</strong> Add new items using a simple form with real-time validation.</li>
+    
+    <li><i class="fas fa-eye"></i> <strong>View Items:</strong> Display all items in a neatly styled and responsive table view.</li>
+    
+    <li><i class="fas fa-search"></i> <strong>Search Functionality:</strong> Filter through items instantly using a dynamic search bar (now integrated).</li>
+    
+    <li><i class="fas fa-edit"></i> <strong>Update Items:</strong> Edit existing items using auto-filled forms for quick changes.</li>
+    
+    <li><i class="fas fa-trash-alt"></i> <strong>Delete Items:</strong> Delete items securely with confirmation prompts to avoid mistakes.</li>
+        
+    <li><i class="fas fa-shield-alt"></i> <strong>Protected Routes:</strong> Only logged-in users can add, edit, or delete items.</li>
+    
+    <li><i class="fas fa-mobile-alt"></i> <strong>Responsive Design:</strong> Fully mobile-optimized interface using clean CSS layout.</li>
+    
+    <li><i class="fas fa-tools"></i> <strong>Error Handling:</strong> Custom pages for 404 errors, server crashes, and validation issues.</li>
+    
+    <li><i class="fas fa-globe"></i> <strong>Deployment:</strong> Live and shareable—deployed to <strong>Render</strong> or a cloud provider.</li>
+    
+    <li><i class="fas fa-code-branch"></i> <strong>Git Integration:</strong> Project is version-controlled with Git and hosted on GitHub.</li>
+    
+    <li><i class="fas fa-clone"></i> <strong>Reusable Layout:</strong> Uses a master layout file (`main.hbs`) for consistent design across all views.</li>
   </ul>
 </section>
